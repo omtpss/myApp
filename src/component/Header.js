@@ -1,10 +1,19 @@
 
+import React, { useState, useEffect } from "react"
 import { Link } from "react-router-dom";
 
 
+
+
 function Header() {
+    const [scroll, setScroll] = useState(false);
+ useEffect(() => {
+   window.addEventListener("scroll", () => {
+     setScroll(window.scrollY > 100);
+   });
+ }, []);
     return (
-        <div className="siteHeader">
+        <div className={scroll ? "siteHeader stickyHeader" : "siteHeader"}>
             <div className="container">
                 <div className="siteNav">
                     <div className="siteLogo">

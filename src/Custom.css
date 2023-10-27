@@ -1,6 +1,15 @@
+:root {
+  --primaryColor: #e5540a;
+}
+
+
 body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   padding: 0;
   margin: 0;
+}
+
+body * {
+  box-sizing: border-box;
 }
 
 body {
@@ -23,6 +32,10 @@ code {
   margin: 0 auto;
 }
 
+.sectionPadding {
+  padding-block: 120px;
+}
+
 .primaryBtn {
   padding: 18px 36px;
   font-size: 16px;
@@ -39,16 +52,38 @@ code {
 }
 
 .primaryBtn:hover {
-  background-color: #e5540a;
+  background-color: var(--primaryColor);
 }
 
+.sectionTitleWrap h2 {
+  font-size: 48px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.subTitle {
+  font-size: 24px;
+  color: #ccc;
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.textMd {
+  font-size: 18px;
+  color: #919191;
+  line-height: 1.6;
+}
+
+/* Header */
 .siteHeader {
-  padding: 20px 40px;
+  padding: 0 40px;
   column-gap: 20px;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 9;
+  background: rgba(0,0,0,0.2);
 }
 
 .siteNav {
@@ -60,7 +95,6 @@ code {
 .siteNav ul {
   list-style: none;
   display: flex;
-  column-gap: 50px;
 }
 
 .siteNav ul a {
@@ -68,12 +102,15 @@ code {
   text-decoration: none;
   font-size: 18px;
   transition: .4s all;
-  padding: 20px 0;
+  padding: 45px 20px;
   display: inline-block;
+  border-bottom: 2px solid transparent;
+  transition: .4s all;
 }
 
 .siteNav ul a:hover {
-  color: #e5540a;
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
 }
 
 .siteNav span {
@@ -89,6 +126,15 @@ code {
   font-weight: bold;
 }
 
+.stickyHeader .siteNav ul a {
+  padding: 32px 20px;
+}
+
+.stickyHeader {
+  background: rgba(0,0,0,0.9);
+}
+
+/* Banner */
 .banner {
   background-image: url(../public/images/bg1.jpg);
   height: 100vh;
@@ -118,5 +164,55 @@ code {
   color: #fff;
   font-size: 80px;
   line-height: 1.4;
+  font-weight: bold;
+}
+
+
+/* About Section */
+.aboutWrap {
+  background-color: #090909;
+}
+.aboutRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.aboutRow .aboutCol {
+  flex-basis: calc(50% - 40px);
+}
+
+.aboutImg {
+  background: rgba(255,255,255,0.01);
+  padding: 40px 0 0;
+  height: 620px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.aboutImg img {
+  width: auto;
+  height: 100%;
+}
+
+.aboutFact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-flow: wrap;
+}
+
+.aboutFact p {
+  color: #919191;
+  font-size: 21px;
+  text-align: center;
+}
+
+.aboutFact p span {
+  color: var(--primaryColor);
+  font-size: 54px;
+  display: block;
+  margin: 30px 0 10px;
   font-weight: bold;
 }
