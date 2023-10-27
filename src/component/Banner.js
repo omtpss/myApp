@@ -19,7 +19,7 @@ function Banner() {
                         ]}
                         wrapper="div"
                         speed={10}
-                        style={{ fontSize: '40px', display: 'block', color: '#fff', fontWeight: '600',marginTop:20 }}
+                        style={{ fontSize: '40px', display: 'block', color: '#fff', fontWeight: '600',marginTop:20, marginBottom:40 }}
                         repeat={Infinity}
                     />
 
