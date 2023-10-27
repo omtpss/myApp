@@ -234,6 +234,10 @@ body {
   gap: 24px;
 }
 
+.serviceCard * {
+  transition: .4s all;
+}
+
 .serviceCard {
   flex-basis: calc(33.33% - 16px);
   border: 1px solid #222222;
@@ -243,6 +247,10 @@ body {
 
 .serviceCard .serviceIocn {
   margin-bottom: 20px;
+}
+
+.serviceCard:hover .serviceIocn svg {
+  fill: var(--primaryColor);
 }
 
 .serviceCard .textMd {
@@ -257,7 +265,7 @@ body {
 .contactForm {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 24px;
   background: #101010;
   padding: 44px;
   max-width: 1000px;

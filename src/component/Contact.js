@@ -4,7 +4,7 @@ function Contact() {
         <div className="contactWrap sectionPadding">
             <div className="container">
                 <div className="sectionTitleWrap textCenter titleSpace">
-                    <h2>Contact</h2>
+                    <h2>Contact Us</h2>
                 </div>
                 <div className="contactForm">
                     <div className="formGroup">
