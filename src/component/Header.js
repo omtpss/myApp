@@ -8,7 +8,7 @@ function Header() {
             <div className="container">
                 <div className="siteNav">
                     <div className="siteLogo">
-                        <span>OM</span>
+                        <span>OP</span>
                     </div>
                     <ul>
                         <li>
