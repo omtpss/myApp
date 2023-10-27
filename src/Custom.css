@@ -19,6 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #090909;
 }
 
 code {
@@ -113,7 +114,7 @@ code {
   border-color: var(--primaryColor);
 }
 
-.siteNav span {
+.siteLogo span {
   background-color: #fff;
   color: #090909;
   width: 40px;
@@ -215,4 +216,58 @@ code {
   display: block;
   margin: 30px 0 10px;
   font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: #101010;
+}
+
+.footer .siteLogo span {
+  margin: 0 auto;
+  width: 54px;
+  height: 54px;
+  font-size: 22px;
+}
+
+.footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  margin-block: 30px;
+}
+
+.footer ul a {
+  border: 1px solid #202020;
+  border-radius: 50%;
+  color: #919195;
+  display: block;
+  font-size: 15px;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
+  width: 40px;
+}
+
+.footer ul a svg, .footer ul a {
+    transition: .4s all;
+}
+
+.footer ul a:hover {
+  background: #090909;
+}
+
+.footer ul a:hover svg {
+  fill: var(--primaryColor);
+}
+
+
+
+p.copyRightTxt {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: normal;
 }

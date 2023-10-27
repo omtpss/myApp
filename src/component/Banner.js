@@ -2,7 +2,7 @@ import { TypeAnimation } from 'react-type-animation';
 
 function Banner() {
     return (
-        <div className="banner">
+        <div className="banner sectionPadding">
             <div className="container">
                 <div>
                     <h1>Hi, I Am Name</h1>
