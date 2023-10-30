@@ -262,6 +262,57 @@ body {
 }
 
 
+/* Portfolio Section */
+.portfolioRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-flow: wrap;
+}
+
+.porfolioCol {
+  flex-basis: calc(33.33% - 16px);
+}
+
+.porfolioCard {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.porfolioImg img {
+  width: 100%;
+  transition: .4s all;
+}
+
+.porfolioContent {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: .4s all;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.porfolioCard:hover .porfolioContent {
+  opacity: 1;
+  visibility: visible;
+}
+
+.porfolioCard:hover .porfolioImg img {
+  transform: scale(1.1);
+}
+
+.porfolioContent  .subTitle{
+  margin: 0;
+}
+
 /* Content */
 .contactForm {
   display: flex;
@@ -285,6 +336,7 @@ body {
   border: 1px solid var(--borderColor);
   background-color: transparent;
   padding: 12px 20px;
+  color: #fff;
 }
 
 .formGroup textarea {
