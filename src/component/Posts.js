@@ -3,7 +3,7 @@ import { slice } from 'lodash'
 function Posts() {
   const [post, setPost] = useState([])
   const [isCompleted, setIsCompleted] = useState(false)
-  const [index, setIndex] = useState(5)
+  const [index, setIndex] = useState(3)
   const initialPosts = slice(post, 0, index)
   const getData = () => {
     fetch('https://jsonplaceholder.typicode.com/posts')
@@ -12,7 +12,7 @@ function Posts() {
       .catch((e) => console.log(e))
   }
   const loadMore = () => {
-    setIndex(index + 5)
+    setIndex(index + 3)
     console.log(index)
     if (index >= post.length) {
       setIsCompleted(true)
