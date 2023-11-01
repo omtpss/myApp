@@ -27,7 +27,7 @@ function Contact() {
     //   }, []);
     
     return (
-        <div className="contactWrap sectionPadding">
+        <section className="contactWrap sectionPadding"  id='contact'>
             <div className="container">
                 <div className="sectionTitleWrap textCenter titleSpace">
                     <h2>Contact Us </h2>
@@ -50,7 +50,7 @@ function Contact() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

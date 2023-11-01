@@ -1,11 +1,19 @@
+import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
 
 function Banner() {
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <div className="banner sectionPadding">
+        <section className="banner sectionPadding" id='home'>
             <div className="container">
                 <div>
-                    <h1>Hi, I Am Name</h1>
+                    <h1>Hi, I Am John Doe</h1>
 
                     <TypeAnimation
                         sequence={[
@@ -19,18 +27,17 @@ function Banner() {
                         ]}
                         wrapper="div"
                         speed={10}
-                        style={{ fontSize: '40px', display: 'block', color: '#fff', fontWeight: '600', marginTop: 20, marginBottom: 40 }}
                         repeat={Infinity}
                     />
 
-                    <button type='button' className='primaryBtn'>Contact Us</button>
+                    <Link className='primaryBtn' to="/" onClick={() => scrollToSection('contact')}>Contact Us</Link>
 
                     <a href={'./images/dummy.pdf'} download="cv" target="_blank" rel="noreferrer" style={{ marginLeft: 24 }}>
                         <button type='button' className='primaryBtn orangeBtn'>Download CV</button>
                     </a>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

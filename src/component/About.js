@@ -1,7 +1,7 @@
 
 function About() {
     return (
-        <div className="aboutWrap sectionPadding">
+        <section className="aboutWrap sectionPadding" id='about'>
             <div className="container">
                 <div className="aboutRow">
                     <div className="aboutCol">
@@ -34,7 +34,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,6 +1,6 @@
 function Services() {
     return (
-        <div className="servicesWrap sectionPadding">
+        <section className="servicesWrap sectionPadding"  id='services'>
             <div className="container">
                 <div className="sectionTitleWrap textCenter titleSpace">
                     <h2>Services</h2>
@@ -66,7 +66,7 @@ function Services() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
