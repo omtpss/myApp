@@ -19,11 +19,15 @@ function Banner() {
                         ]}
                         wrapper="div"
                         speed={10}
-                        style={{ fontSize: '40px', display: 'block', color: '#fff', fontWeight: '600',marginTop:20, marginBottom:40 }}
+                        style={{ fontSize: '40px', display: 'block', color: '#fff', fontWeight: '600', marginTop: 20, marginBottom: 40 }}
                         repeat={Infinity}
                     />
 
                     <button type='button' className='primaryBtn'>Contact Us</button>
+
+                    <a href={'./images/dummy.pdf'} download="cv" target="_blank" rel="noreferrer" style={{ marginLeft: 24 }}>
+                        <button type='button' className='primaryBtn orangeBtn'>Download CV</button>
+                    </a>
                 </div>
             </div>
         </div>

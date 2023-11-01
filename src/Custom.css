@@ -44,7 +44,7 @@ body {
   text-transform: uppercase;
   line-height: normal;
   border-radius: 0;
-  border: none;
+  border: 1px solid rgba(0,0,0,0.1);
   background: rgba(0,0,0,0.4);
   color: #fff;
   transition: .4s all;
@@ -53,6 +53,17 @@ body {
 
 .primaryBtn:hover {
   background-color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+
+.orangeBtn {
+  background-color: transparent;
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+}
+
+.orangeBtn:hover {
+  color: #fff;
 }
 
 .sectionTitleWrap h2 {

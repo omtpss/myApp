@@ -1,57 +1,62 @@
-import React, { useState, useEffect } from 'react'
-import { slice } from 'lodash'
-function Posts() {
-  const [post, setPost] = useState([])
-  const [isCompleted, setIsCompleted] = useState(false)
-  const [index, setIndex] = useState(3)
-  const initialPosts = slice(post, 0, index)
-  const getData = () => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then((res) => res.json())
-      .then((json) => setPost(json))
-      .catch((e) => console.log(e))
-  }
-  const loadMore = () => {
-    setIndex(index + 3)
-    console.log(index)
-    if (index >= post.length) {
-      setIsCompleted(true)
-    } else {
-      setIsCompleted(false)
-    }
-  }
-  useEffect(() => {
-    getData()
-  }, [])
+import React, { useState } from 'react';
+
+const ListItem = ({ items }) => {
+  const [visibleItems, setVisibleItems] = useState(3);
+  const [nextGroupIndex, setNextGroupIndex] = useState(1);
+
+  const showNextGroup = () => {
+    setVisibleItems(visibleItems + 3);
+    setNextGroupIndex(nextGroupIndex + 1);
+  };
+
+  const hasMoreItems = visibleItems < items.length;
+
   return (
     <div className='container'>
-      <h2 className="mb-3">React Js Load More Example</h2>
-      {initialPosts.map((item) => {
-        return (
-          <div
-            className="mb-3 card bg-primary p-2 text-dark bg-opacity-25"
-            key={item.id}
-          >
-            <div className="card-body">{item.title}</div>
+      <div className="portfolioRow">
+        {items.slice(0, visibleItems).map((data, index) => (
+
+          <div className="porfolioCol" key={index}>
+            <div className="porfolioCard">
+              <div className="porfolioImg">
+                {<img src={(data.img)} alt="" />}
+              </div>
+              <div className="porfolioContent">
+                <p className="textMd">{data.title}</p>
+                <h4 className="subTitle">{data.decs}</h4>
+              </div>
+            </div>
           </div>
-        )
-      })}
-      <div className="d-grid mt-3 mb-5">
-        {isCompleted ? (
-          <button
-            onClick={loadMore}
-            type="button"
-            className="btn btn-danger disabled"
-          >
-            That's It
-          </button>
-        ) : (
-          <button onClick={loadMore} type="button" className="btn btn-danger">
-            Load More +
-          </button>
-        )}
+        ))}
       </div>
+      {hasMoreItems && (
+        <div className="textCenter" style={{ marginTop: 24 }}>
+        <button type="button" className="primaryBtn" onClick={showNextGroup}>View More</button>
+        </div>
+      )}
     </div>
-  )
-}
+  );
+};  
+
+const Posts = () => {
+  const items = [
+    { id: 1, title: 'Web Design', decs: 'Business Website Design', img: './images/portfolio01.jpg' },
+    { id: 2, title: 'Web Development', decs: 'Food Website Design', img: './images/portfolio02.jpg' },
+    { id: 3, title: 'Digital Marketing', decs: 'App Marketing', img: './images/portfolio03.jpg' },
+    { id: 4, title: 'Web Design', decs: 'Business Website Design', img: './images/portfolio01.jpg' },
+    { id: 5, title: 'Web Development', decs: 'Food Website Design', img: './images/portfolio02.jpg' },
+    { id: 6, title: 'Digital Marketing', decs: 'App Marketing', img: './images/portfolio03.jpg' },
+    { id: 7, title: 'Web Design', decs: 'Business Website Design', img: './images/portfolio01.jpg' },
+    { id: 8, title: 'Web Development', decs: 'Food Website Design', img: './images/portfolio02.jpg' },
+    { id: 9, title: 'Digital Marketing', decs: 'App Marketing', img: './images/portfolio03.jpg' }
+    // Add more items as needed
+  ];
+
+  return (
+    <div>
+      <ListItem items={items} />
+    </div>
+  );
+};
+
 export default Posts;
