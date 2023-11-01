@@ -534,6 +534,24 @@ body.lightTheme {
   color: #333;
 }
 
-.lightTheme .serviceCard {
+.lightTheme .serviceCard, .lightTheme .formGroup input, .lightTheme .formGroup textarea {
   border-color:#ddd;
 }
+
+.lightTheme .servicesWrap, .lightTheme .footer {
+  background: rgba(0,0,0,0.02);
+}
+
+.lightTheme .primaryBtn {
+  background-color: var(--primaryColor);
+}
+
+.lightTheme .orangeBtn {
+  background-color: transparent;
+}
+
+.lightTheme .primaryBtn:hover {
+  background-color: var(--secondaryColor);
+  border-color: var(--secondaryColor);
+}
+
