@@ -129,7 +129,7 @@ body {
 }
 
 .siteNav ul a:hover {
-  color: var(--primaryColor);
+  color: var(--primaryColor) !important;
   border-color: var(--primaryColor);
 }
 
@@ -512,17 +512,17 @@ body.lightTheme {
   color: var(--secondaryColor);
 }
 
-.lightTheme .banner::after {
+.lightTheme .banner::after, .lightTheme .porfolioContent {
   background-color: rgba(255,255,255,.7);
 }
 
 .lightTheme .stickyHeader {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
   border-color: #ddd;
 }
 
 .lightTheme .switchBtn .slider {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.2);
 }
 
 .lightTheme .siteLogo span {
@@ -534,12 +534,16 @@ body.lightTheme {
   color: #333;
 }
 
+.lightTheme .textMd, .lightTheme .aboutFact p {
+  color: #444;
+}
+
 .lightTheme .serviceCard, .lightTheme .formGroup input, .lightTheme .formGroup textarea {
   border-color:#ddd;
 }
 
-.lightTheme .servicesWrap, .lightTheme .footer {
-  background: rgba(0,0,0,0.02);
+.lightTheme .servicesWrap, .lightTheme .footer, .lightTheme .aboutImg {
+  background: #f0f6fb;
 }
 
 .lightTheme .primaryBtn {
