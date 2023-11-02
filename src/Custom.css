@@ -195,7 +195,7 @@ body {
   content: "";
   height: 28px;
   width: 28px;
-  left: 5px;
+  left: 4px;
   bottom: 3px;
   background: var(--primaryColor);
   -webkit-transition: .4s;
@@ -341,7 +341,7 @@ body {
 }
 
 .serviceCard * {
-  transition: .4s all;
+  transition: .2s all;
 }
 
 .serviceCard {
