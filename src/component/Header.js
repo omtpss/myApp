@@ -30,7 +30,7 @@ function Header() {
 
     const [addClass, setAddClass] = useState(false);
 
-    const toggleClass = () => { 
+    const toggleClass = () => {
         setAddClass(!addClass);
     };
 
@@ -42,12 +42,12 @@ function Header() {
                     <div className="siteLogo">
                         <span>OP</span>
                     </div>
-                    <ul className={addClass ? 'show' : ''}>
-                    <div className="mobileToggle" onClick={toggleClass}>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                    <ul className={addClass ? 'show' : ''} onClick={toggleClass}>
+                        <div className="mobileToggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                         <li>
                             <Link to="/" onClick={() => scrollToSection('home')}>Home</Link>
                         </li>

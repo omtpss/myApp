@@ -8,6 +8,8 @@
   --darkBtnColor: #19181d;
   --whiteColor: #fff;
   --subTitleColor: #ccc;
+  --lightThemeBg : #f0f6fb;
+  --transition01 : .4s all;
 }
 
 body,
@@ -49,12 +51,12 @@ body {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
-  line-height: 26px;
+  line-height: normal;
   border-radius: 0;
   border: 1px solid var(--darkBtnColor);
   background: var(--darkBtnColor);
   color: var(--whiteColor);
-  transition: .4s all;
+  transition: var(--transition01);
   cursor: pointer;
   text-decoration: none;
   font-family: inherit;
@@ -111,7 +113,7 @@ body {
   top: 0;
   width: 100%;
   z-index: 9;
-  transition: .4s all;
+  transition: var(--transition01);
 }
 
 .siteNav {
@@ -133,11 +135,11 @@ body {
   color: var(--whiteColor);
   text-decoration: none;
   font-size: 18px;
-  transition: .4s all;
+  transition: var(--transition01);
   padding: 45px 20px;
   display: inline-block;
   border-bottom: 2px solid transparent;
-  transition: .4s all;
+  transition: var(--transition01);
 }
 
 .siteNav ul a:hover {
@@ -146,8 +148,8 @@ body {
 }
 
 .siteLogo span {
-  background-color: var(--whiteColor);
-  color: var(--secondaryColor);
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
   width: 40px;
   height: 40px;
   display: flex;
@@ -175,7 +177,7 @@ body {
   height: 36px;
   margin: 0 0 0 20px;
   border: 1px solid transparent;
-  transition: .4s all;
+  transition: var(--transition01);
 }
 
 .switchBtn input {
@@ -407,7 +409,7 @@ body {
 
 .porfolioImg img {
   width: 100%;
-  transition: .4s all;
+  transition: var(--transition01);
   aspect-ratio: 4/3;
   object-fit: cover;
   float: left;
@@ -420,7 +422,7 @@ body {
   content: '';
   opacity: 0;
   visibility: hidden;
-  transition: .4s all;
+  transition: var(--transition01);
 }
 
 .porfolioCard:hover .porfolioImg::after {
@@ -437,7 +439,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   padding: 20px;
-  transition: .4s all;
+  transition: var(--transition01);
 }
 
 .porfolioCard:hover .porfolioImg img {
@@ -457,7 +459,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   visibility: hidden;
-  transition: .4s all;
+  transition: var(--transition01);
   z-index: 9;
   width: 100%;
   margin: 0;
@@ -535,7 +537,7 @@ body {
 
 .footer ul a svg,
 .footer ul a {
-  transition: .4s all;
+  transition: var(--transition01);
 }
 
 .footer ul a:hover {
@@ -572,20 +574,15 @@ body.lightTheme {
 }
 
 .lightTheme .porfolioContent {
-  background-color: #f0f6fb;
+  background-color: var(--lightThemeBg);
 }
 
 .lightTheme .stickyHeader {
-  background: rgba(240, 246, 251, 0.9);
+  background: rgba(240, 246, 251, 0.98);
 }
 
 .lightTheme .switchBtn .slider {
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-.lightTheme .siteLogo span {
-  background-color: var(--secondaryColor);
-  color: var(--whiteColor);
 }
 
 .lightTheme .subTitle {
@@ -606,7 +603,7 @@ body.lightTheme {
 .lightTheme .servicesWrap,
 .lightTheme .footer,
 .lightTheme .aboutImg {
-  background: #f0f6fb;
+  background: var(--lightThemeBg);
 }
 
 .lightTheme .primaryBtn {
@@ -669,6 +666,14 @@ body.lightTheme {
   .aboutRow .aboutCol {
     flex-basis: calc(50% - 15px);
   }
+
+  .sectionPadding {
+      padding-block: 60px;
+  }
+
+  .titleSpace {
+      margin-bottom: 30px;
+  }
 }
 
 
@@ -679,6 +684,7 @@ body.lightTheme {
 
   .index-module_type__E-SaG {
     font-size: 28px;
+    margin: 10px 0 20px
   }
 
   .sectionTitleWrap h2 {
@@ -704,10 +710,30 @@ body.lightTheme {
 }
 
 @media (max-width:767.98px) {
+  .banner h1 {
+    font-size: 36px;
+  }
+
+  .index-module_type__E-SaG {
+    font-size: 24px;
+    margin: 10px 0 20px
+  }
+
+  .sectionTitleWrap h2 {
+    font-size: 28px;
+  }
+
+  .sectionPadding {
+      padding-block: 60px;
+  }
+
+  .titleSpace {
+      margin-bottom: 20px;
+  }
 
   .serviceCard,
   .porfolioCol,
-  .aboutRow .aboutCol {
+  .aboutRow .aboutCol, .contactForm .formGroup {
     flex-basis: 100%;
     max-width: 100%;
   }
@@ -717,6 +743,15 @@ body.lightTheme {
     font-size: 14px;
   }
 
+  .banner {
+      height: 70vh;
+  }
+
+  .banner .primaryBtn {
+      max-width: 170px;
+  }
+
+  /* Header Responsive */
   .mobileToggle {
     width: 24px;
     height: 16px;
@@ -725,13 +760,13 @@ body.lightTheme {
   }
 
   .mobileToggle span {
-    background-color: #fff;
+    background-color: var(--whiteColor);
     height: 2px;
     width: 20px;
     display: inline-block;
     position: absolute;
     right: 0;
-    transition: .4s all;
+    transition: var(--transition01);
     top: 7px;
   }
 
@@ -744,9 +779,12 @@ body.lightTheme {
   }
 
   .siteNav ul.show .mobileToggle {
-    width: 100%;
-    margin-left: -20px;
-}
+    margin-left: auto;
+    margin-right: 20px;
+    position: absolute;
+    right: 0;
+    top: 32px;
+  }
 
   .siteNav ul.show .mobileToggle span:nth-child(2) {
     display: none;
@@ -765,15 +803,15 @@ body.lightTheme {
   .siteNav ul {
     position: fixed;
     background: var(--secondaryColor);
-    left:0;
-    top: -100%;
+    left: 0;
+    top: -105%;
     height: 100%;
     max-width: 100%;
     width: 100%;
-    padding-top: 30px;
+    padding-top: 50px;
     z-index: 99;
     display: block;
-    transition: .4s all;
+    transition: var(--transition01);
   }
 
   .siteNav ul.show {
@@ -789,10 +827,19 @@ body.lightTheme {
   }
 
   .siteNav ul a {
-    padding: 16px 20px;
+    padding: 24px 20px !important;
     display: block;
     border-bottom: 1px solid var(--borderColor);
     text-align: center;
+    color: var(--whiteColor) !important;
+  }
+
+  .lightTheme .mobileToggle span {
+    background-color: var(--secondaryColor);
+  }
+
+  .lightTheme .siteNav ul.show .mobileToggle span {
+    background-color: var(--whiteColor);
   }
 }
 
