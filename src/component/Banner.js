@@ -31,9 +31,7 @@ function Banner() {
 
                     <Link className='primaryBtn' to="/" onClick={() => scrollToSection('contact')}>Contact Us</Link>
 
-                    <a href={'./images/dummy.pdf'} download="cv" target="_blank" rel="noreferrer" style={{ marginLeft: 24 }}>
-                        <button type='button' className='primaryBtn orangeBtn'>Download CV</button>
-                    </a>
+                    <a href={'./images/dummy.pdf'} download="cv" target="_blank" rel="noreferrer" className='primaryBtn orangeBtn' style={{ marginLeft: 24 }}>Download CV</a>
                 </div>
             </div>
         </section>
