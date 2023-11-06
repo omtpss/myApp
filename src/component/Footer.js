@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
     return (
-        <div className="footer sectionPadding">
+        <div className="footer sectionPadding lightBg">
             <div className="container">
                 <div className="siteLogo">
                     <span>OP</span>

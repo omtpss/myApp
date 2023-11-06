@@ -50,7 +50,7 @@ body {
 }
 
 .primaryBtn {
-  padding: 16px 40px;
+  padding: 22px 40px 18px;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -82,7 +82,7 @@ body {
 }
 
 .sectionTitleWrap h2 {
-  font-size: 60px;
+  font-size: 54px;
   color: var(--whiteColor);
   font-weight: 700;
   margin: 0 0 12px;
@@ -104,12 +104,25 @@ body {
 .textMd {
   font-size: 20px;
   color: var(--textColor);
-  line-height: 1.4;
+  line-height: 1.3;
   font-weight: 300;
 }
 
 .textCenter {
   text-align: center;
+}
+
+.lightBg {
+  background-color: var(--lightBg);
+}
+
+.rowDiv {
+  display: flex;
+  gap: 20px;
+}
+
+.rowCol2 {
+  flex: 0 0 50%;
 }
 
 /* Header */
@@ -320,7 +333,6 @@ body {
 }
 
 .aboutImg {
-  background: var(--lightBg);
   padding: 40px 0 0;
   height: 620px;
   overflow: hidden;
@@ -355,10 +367,6 @@ body {
 
 
 /* Services */
-.servicesWrap {
-  background-color: var(--lightBg);
-}
-
 .serviceCardWrap {
   display: flex;
   flex-flow: wrap;
@@ -469,18 +477,22 @@ body {
 }
 
 .porfolioImg::after {
-  background-color: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .75);
   position: absolute;
   inset: 0;
   content: '';
   opacity: 0;
   visibility: hidden;
   transition: var(--transition01);
+  /* width: 0;
+  transform: translateX(-50%);
+  left: 50%; */
 }
 
 .porfolioCard:hover .porfolioImg::after {
   visibility: visible;
   opacity: 1;
+  width: 100%;
 }
 
 .porfolioContent {
@@ -496,7 +508,7 @@ body {
 }
 
 .porfolioCard:hover .porfolioImg img {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 .porfolioContent .subTitle {
@@ -504,8 +516,7 @@ body {
 }
 
 .porfolioCard .primaryBtn {
-  max-width: 160px;
-  padding-block: 12px;
+  max-width: 170px;
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -556,11 +567,65 @@ body {
 }
 
 
-/* Footer */
-.footer {
-  background-color: var(--lightBg);
+/* Skill Section */
+.skillRow {
+  display: flex;
+  flex-flow: wrap;
+  column-gap: 80px;
 }
 
+.skillBarWrap {
+  margin-bottom: 30px;
+  position: relative;
+  overflow-x: hidden;
+  flex: 0 0 calc(50% - 40px);
+}
+
+.skillBarWrap:nth-last-child(2), .skillBarWrap:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.skillBarWrap p {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--subTitleColor);
+  margin: 0 0 5px;
+}
+
+.skillBarWrap:before {
+  width: 100%;
+  height: 10px;
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--darkBtnColor);
+  bottom: 0;
+  border-radius: 5px;
+}
+
+.skillBarWrap .skillBar {
+  width: 40%;
+  height: 10px;
+  background: #f4392f;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  transition: var(--transition01);
+}
+
+.skillBar span {
+  position: absolute;
+  top: -24px;
+  padding: 0;
+  font-size: 18px;
+  padding: 3px 0;
+  font-weight: 500;
+  right: 0;
+}
+
+
+
+/* Footer */
 .footer .siteLogo span {
   margin: 0 auto;
   width: 54px;
@@ -613,14 +678,16 @@ body {
 /* Light Theme */
 body.lightTheme {
   background-color: var(--whiteColor);
+  color: var(--secondaryColor);
 }
 
 .lightTheme .sectionTitleWrap h2,
 .lightTheme .banner h1,
 .lightTheme .index-module_type__E-SaG,
 .lightTheme .siteNav ul a,
-.lightTheme .copyRightTxt, 
-.lightTheme .digitalMarque .marqueInner h1 {
+.lightTheme .copyRightTxt,
+.lightTheme .digitalMarque .marqueInner h1, 
+.lightTheme .skillBarWrap p {
   color: var(--secondaryColor);
 }
 
@@ -655,9 +722,7 @@ body.lightTheme {
   border-color: #ddd;
 }
 
-.lightTheme .servicesWrap,
-.lightTheme .footer,
-.lightTheme .aboutImg {
+.lightTheme .lightBg {
   background: var(--lightThemeBg);
 }
 

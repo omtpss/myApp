@@ -5,7 +5,7 @@ function About() {
             <div className="container">
                 <div className="aboutRow">
                     <div className="aboutCol">
-                        <div className="aboutImg">
+                        <div className="aboutImg lightBg">
                             <img src="./images/about.png" alt="about-img"></img>
                         </div>
                     </div>

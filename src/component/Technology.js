@@ -1,6 +1,6 @@
 function Technology() {
     return (
-        <section className="digitalMarque">
+        <section className="digitalMarque lightBg">
             <div className="container">
                 {/* <div className="technologyRow">
                     <div className="technologyCol">
@@ -26,9 +26,9 @@ function Technology() {
                     </div>
                 </div> */}
 
-                <div class="marqueInner">
-                    <div class="marqueTrack">
-                        <div class="content">
+                <div className="marqueInner">
+                    <div className="marqueTrack">
+                        <div className="content">
                             <h1><span>I always try to put my best service to my client</span> <i>.</i> <span>I always try to put my best service to my client</span> <i>.</i> <span>I always try to put my best service to my client</span> <i>.</i> <span>I always try to put my best service to my client</span> <i>.</i> <span>I always try to put my best service to my client</span> <i>.</i></h1>
                         </div>
                     </div>
