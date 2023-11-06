@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
+import SocialLinks from './SocialLinks';
 
 function Banner() {
     const scrollToSection = (sectionId) => {
@@ -33,6 +34,9 @@ function Banner() {
 
                     <a href={'./images/dummy.pdf'} download="cv" target="_blank" rel="noreferrer" className='primaryBtn orangeBtn'>Download CV</a>
                 </div>
+            </div>
+            <div className='bannerSocial'>
+                <SocialLinks/>
             </div>
         </section>
     )

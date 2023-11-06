@@ -39,6 +39,10 @@ body {
   color: var(--whiteColor);
 }
 
+ul, ol {
+  list-style: none;
+}
+
 .container {
   max-width: 1360px;
   padding: 0 20px;
@@ -114,6 +118,14 @@ body {
 
 .lightBg {
   background-color: var(--lightBg);
+}
+
+.svgLinks svg {
+  transition: var(--transition01);
+}
+
+.svgLinks a:hover svg {
+  fill: var(--primaryColor);
 }
 
 .rowDiv {
@@ -316,6 +328,23 @@ body {
 
 .banner .orangeBtn {
   margin-left: 24px;
+}
+
+.bannerSocial {
+  position: absolute;
+  right: 30px;
+  bottom: 10px;
+  z-index: 9;
+}
+
+.bannerSocial ul li a {
+  margin: 12px 0;
+  width: 24px;
+  text-align: center;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -606,7 +635,7 @@ body {
 .skillBarWrap .skillBar {
   width: 40%;
   height: 10px;
-  background: #f4392f;
+  background: var(--primaryColor);
   display: block;
   position: relative;
   border-radius: 10px;
@@ -654,17 +683,12 @@ body {
   justify-content: center;
 }
 
-.footer ul a svg,
 .footer ul a {
   transition: var(--transition01);
 }
 
 .footer ul a:hover {
   background: var(--secondaryColor);
-}
-
-.footer ul a:hover svg {
-  fill: var(--primaryColor);
 }
 
 .copyRightTxt {
@@ -743,6 +767,10 @@ body.lightTheme {
 .lightTheme .footer ul a:hover {
   background: transparent;
   border-color: var(--primaryColor);
+}
+
+.lightTheme .skillBarWrap:before {
+  background: var(--textColor);
 }
 
 
