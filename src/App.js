@@ -7,6 +7,7 @@ import Header from './component/Header';
 // import LoadMore from './component/Posts';
 import Portfolio from './component/Portfolio';
 import Services from './component/Services';
+import Technology from './component/Technology';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Banner/>
       <About/>
       <Services/>
+      <Technology/>
       <Portfolio/>
       <Contact/>
       {/* <LoadMore/> */}
