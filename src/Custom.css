@@ -12,6 +12,9 @@
   --transition01: .4s all;
   --borderRadiusCard: 10px;
   --borderRadiusBtn: 5px;
+  --fontPoppins: 'Poppins', sans-serif;
+  --fontJosefin: 'Josefin Sans', sans-serif;
+
 }
 
 body,
@@ -33,10 +36,18 @@ body * {
 }
 
 body {
-  /* font-family: 'Poppins', sans-serif; */
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: var(--fontPoppins);
   background-color: var(--secondaryColor);
   color: var(--whiteColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontJosefin);
 }
 
 ul, ol {
@@ -54,7 +65,7 @@ ul, ol {
 }
 
 .primaryBtn {
-  padding: 22px 40px 18px;
+  padding: 16px 40px;
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
@@ -100,16 +111,16 @@ ul, ol {
 .subTitle {
   font-size: 24px;
   color: var(--subTitleColor);
-  margin: 0 0 12px;
+  margin: 0 0 10px;
   line-height: 1.4;
   font-weight: 600;
 }
 
 .textMd {
-  font-size: 20px;
+  font-size: 16px;
   color: var(--textColor);
-  line-height: 1.3;
-  font-weight: 300;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .textCenter {
@@ -324,6 +335,7 @@ ul, ol {
   font-weight: 600;
   margin-top: 20px;
   margin-bottom: 40px;
+  font-family: var(--fontJosefin);
 }
 
 .banner .orangeBtn {
@@ -382,7 +394,7 @@ ul, ol {
 
 .aboutFact p {
   color: var(--textColor);
-  font-size: 21px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -644,8 +656,7 @@ ul, ol {
 
 .skillBar span {
   position: absolute;
-  top: -24px;
-  padding: 0;
+  top: -32px;
   font-size: 18px;
   padding: 3px 0;
   font-weight: 500;
