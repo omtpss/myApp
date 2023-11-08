@@ -1,12 +1,12 @@
 function Marque() {
 
     const ImpressData = [
-        { text: 'Instead of interrupting, work on attracting', },
-        { text: `Just because you are the loudest, doesn't make you right` },
-        { text: 'Content is king' },
-        { text: 'Master the topic, the message, and the delivery' },
-        { text: 'Either write something worth reading or do something worth writing about' }
-    ]
+        {id:1, text: 'Instead of interrupting, work on attracting', },
+        {id:2, text: 'Just because you are the loudest, does not make you right', },
+        {id:3, text: 'Content is king', },
+        {id:4, text: 'Master the topic, the message, and the delivery', },
+        {id:5, text: 'Either write something worth reading or do something worth writing about', },
+    ];
 
     return (
         <section className="digitalMarque lightBg">
@@ -18,11 +18,11 @@ function Marque() {
                                 {ImpressData.map((data, index) => {
                                     return (
                                         <>
-                                            <span>{ data.text}</span><i>. </i>
+                                            <span key={index}>{data.text}<i>. </i></span>
                                         </>
                                     )
                                 })}
-                            </h1>
+                            </h1> 
                         </div>
                     </div>
                 </div>
