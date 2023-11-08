@@ -7,7 +7,7 @@ import Header from './component/Header';
 import Portfolio from './component/Portfolio';
 import Services from './component/Services';
 import Skill from './component/Skill';
-import Technology from './component/Technology';
+import Marque from './component/Marque';
 
 function App() {
   return (
@@ -17,9 +17,8 @@ function App() {
       <About/>
       <Skill/>
       <Services/>
-      <Technology/>
+      <Marque/>
       <Portfolio/>
-      
       <Contact/>
       <Footer/>
     </div>
