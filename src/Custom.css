@@ -663,7 +663,6 @@ ul, ol {
 }
 
 
-
 /* Footer */
 .footer .siteLogo span {
   margin: 0 auto;
@@ -959,6 +958,22 @@ body.lightTheme {
 
   .banner .primaryBtn {
     max-width: 170px;
+  }
+
+  .skillBarWrap {
+    flex: 0 0 100%;
+  }
+  
+  .skillBarWrap:nth-last-child(2) {
+    margin-bottom: 30px;
+  }
+
+  .digitalMarque {
+    padding: 30px 0;
+  }
+
+  .digitalMarque .marqueInner h1 {
+      font-size: 24px;
   }
 
   /* Header Responsive */

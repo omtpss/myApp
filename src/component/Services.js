@@ -57,7 +57,6 @@ function Services() {
                     <h2>Services</h2>
                 </div>
                 <div className="serviceCardWrap">
-
                     {serviceData.map((items, index) => {
                         return (
                             <div key={index} className="serviceCard">
