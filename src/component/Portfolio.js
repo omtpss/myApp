@@ -45,7 +45,7 @@ const PortfolioItems = ({ items }) => {
 
 const Portfolio = () => {
     const items = [
-        { id: 1, title: 'Web Design', decs: 'Business Website Design', img: './images/portfolio01.jpg', path: "https://www.google.com" },
+        { id: 1, title: 'Web Design', decs: 'Business Website Design', img: './images/website01.png', path: "https://www.google.com" },
         { id: 2, title: 'Web Development', decs: 'Food Website Design', img: './images/portfolio02.jpg', path: "https://www.google.com" },
         { id: 3, title: 'Digital Marketing', decs: 'App Marketing', img: './images/portfolio03.jpg', path: "https://www.google.com" },
         { id: 4, title: 'Web Design', decs: 'Business Website Design', img: './images/portfolio04.jpg', path: "https://www.google.com" },

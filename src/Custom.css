@@ -523,12 +523,29 @@ ol {
 }
 
 .porfolioImg img {
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  transition: all 6s ease;
+  width: 100%;
+  float: left;
+}
+
+.porfolioImg:hover img {
+  object-position: bottom;
+}
+
+/* .porfolioImg img {
   width: 100%;
   transition: var(--transition01);
   aspect-ratio: 4/3;
   object-fit: cover;
   float: left;
-}
+} 
+
+.porfolioCard:hover .porfolioImg img {
+  transform: scale(1.08);
+}*/
 
 .porfolioImg::after {
   background-color: rgba(0, 0, 0, .75);
@@ -538,9 +555,6 @@ ol {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition01);
-  /* width: 0;
-  transform: translateX(-50%);
-  left: 50%; */
 }
 
 .porfolioCard:hover .porfolioImg::after {
@@ -559,10 +573,6 @@ ol {
   justify-content: flex-end;
   padding: 20px;
   transition: var(--transition01);
-}
-
-.porfolioCard:hover .porfolioImg img {
-  transform: scale(1.08);
 }
 
 .porfolioContent .subTitle {
@@ -896,6 +906,17 @@ body.lightTheme {
 
   .titleSpace {
     margin-bottom: 30px;
+  }
+
+  .porfolioCard .porfolioImg::after {
+    visibility: visible;
+    opacity: 1;
+    width: 100%;
+  }
+  
+  .porfolioCard .primaryBtn {
+    visibility: visible;
+    opacity: 1;
   }
 }
 
