@@ -12,12 +12,17 @@ function Skill() {
 
 
     const skillData = [
-        { skill: 'Html', skillCount: 98 },
+        { skill: 'Html', skillCount: 95 },
         { skill: 'Css', skillCount: 90 },
-        { skill: 'Bootstrap', skillCount: 80 },
+        { skill: 'Bootstrap', skillCount: 85 },
+        { skill: 'Tailwind Css', skillCount: 75 },
+        { skill: 'And Design', skillCount: 80 },
+        { skill: 'Material UI', skillCount: 65 },
         { skill: 'Sass', skillCount: 60 },
-        { skill: 'Javascript', skillCount: 40 },
-        { skill: 'React Js', skillCount: 50 },
+        { skill: 'Javascript', skillCount: 50 },
+        { skill: 'React Js', skillCount: 55 },
+        { skill: 'Photoshop', skillCount: 60 },
+        { skill: 'Figma', skillCount: 50 },
     ];
 
 

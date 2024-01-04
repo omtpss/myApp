@@ -50,7 +50,8 @@ h6 {
   font-family: var(--fontJosefin);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -406,6 +407,18 @@ ul, ol {
   font-weight: bold;
 }
 
+.personlDetail p {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  margin-top: 20px;
+}
+
+.personlDetail p span {
+  flex-basis: 150px;
+  color: var(--whiteColor);
+  font-weight: 500;
+}
 
 /* Services */
 .serviceCardWrap {
@@ -622,7 +635,8 @@ ul, ol {
   flex: 0 0 calc(50% - 40px);
 }
 
-.skillBarWrap:nth-last-child(2), .skillBarWrap:nth-last-child(1) {
+.skillBarWrap:nth-last-child(2),
+.skillBarWrap:nth-last-child(1) {
   margin-bottom: 0;
 }
 
@@ -702,7 +716,7 @@ ul, ol {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
   content: '';
   width: 0;
   height: 0;
@@ -770,8 +784,9 @@ body.lightTheme {
 .lightTheme .index-module_type__E-SaG,
 .lightTheme .siteNav ul a,
 .lightTheme .copyRightTxt,
-.lightTheme .digitalMarque .marqueInner h1, 
-.lightTheme .skillBarWrap p {
+.lightTheme .digitalMarque .marqueInner h1,
+.lightTheme .skillBarWrap p,
+.lightTheme .personlDetail p span {
   color: var(--secondaryColor);
 }
 
@@ -963,7 +978,7 @@ body.lightTheme {
   .skillBarWrap {
     flex: 0 0 100%;
   }
-  
+
   .skillBarWrap:nth-last-child(2) {
     margin-bottom: 30px;
   }
@@ -973,7 +988,7 @@ body.lightTheme {
   }
 
   .digitalMarque .marqueInner h1 {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   /* Header Responsive */
@@ -1077,5 +1092,9 @@ body.lightTheme {
   .banner .orangeBtn {
     margin-left: auto;
     margin-top: 14px;
+  }
+
+  .personlDetail p span {
+    flex-basis: 100%;
   }
 }

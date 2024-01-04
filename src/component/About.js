@@ -15,7 +15,14 @@ function About() {
                                 <h2>About</h2>
                             </div>
                             <h4 className="subTitle">I have 5+ years of experiences in Frontend Development for give you better services.</h4>
-                            <p className="textMd">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend, so absorbed in the exquisite</p>
+                            <p className="textMd">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                            <div className="personlDetail">
+                                <p className="textMd"><span>Name : </span> John Doe</p>
+                                <p className="textMd"><span>Email : </span> johndoe@gmail.com</p>
+                                <p className="textMd"><span>Phone : </span> +91-1234567890</p>
+                                <p className="textMd"><span>Age : </span> 31</p>
+                                <p className="textMd"><span>From : </span> Sector 60, Phase 8b, Mohali</p>
+                            </div>
                             <div className="aboutFact">
                                 <p>
                                     <span>120+</span>

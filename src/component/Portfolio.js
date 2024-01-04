@@ -11,7 +11,7 @@ const PortfolioItems = ({ items }) => {
     const hasMoreItems = loadMore < items.length;
 
     return (
-        <section className="sectionPadding" style={{ paddingBottom: 0 }}  id='portfolio'>
+        <section className="sectionPadding"  id='portfolio'>
             <div className='container'>
                 <div className="sectionTitleWrap textCenter titleSpace">
                     <h2>Portfolio</h2>

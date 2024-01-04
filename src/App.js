@@ -1,7 +1,7 @@
 import './Custom.css';
 import About from './component/About';
 import Banner from './component/Banner';
-import Contact from './component/Contact';
+// import Contact from './component/Contact';
 import Footer from './component/Footer';
 import Header from './component/Header';
 import Portfolio from './component/Portfolio';
@@ -19,7 +19,7 @@ function App() {
       <Services/>
       <Marque/>
       <Portfolio/>
-      <Contact/>
+      {/* <Contact/> */}
       <Footer/>
     </div>
   );
